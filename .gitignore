@@ -1,0 +1,40 @@
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Python bytecode / caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Secrets and local config
+.env
+.env.*
+!.env.example
+
+# Local ChromaDB vector store (rebuilt from knowledge base, never commit)
+chroma_db/
+.chroma/
+.cache/
+
+# Private knowledge base (internal product docs; never publish) and eval output that quotes it
+ai-knowledge-base/
+reports/
+
+# Frontend
+node_modules/
+frontend/dist/
+frontend/dist-widget/
+
+# Generated files
+*.log
+build/
+dist/
+*.egg-info/
+
+# Editor / OS clutter
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

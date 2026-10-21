@@ -1,0 +1,15 @@
+# Pinned to the versions tested in .venv.
+# RAG engine
+langchain-core==1.6.12             # Document class (loading)
+langchain-text-splitters==1.1.3    # chunking
+langchain-ollama==1.1.0            # local embeddings + chat model via Ollama
+ollama==0.6.3                      # Ollama client (error types, /ready model check)
+chromadb==1.5.9                    # persistent local vector store
+python-dotenv==1.2.4               # reads .env
+numpy==2.5.4                       # evaluation: distance-metric check
+
+# HTTP API
+fastapi==0.143.3
+uvicorn==0.54.0
+pydantic==2.14.1
+pydantic-settings==2.16.0

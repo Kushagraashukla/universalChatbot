@@ -1,0 +1,32 @@
+{
+  "apps": [
+    {
+      "app_id": "default",
+      "name": "LMS Assistant",
+      "enabled": true,
+      "knowledge_base_dir": "ai-knowledge-base",
+      "collection": "knowledge_base",
+      "instructions": "You are the help assistant for the LMS product (a school learning management system).",
+      "top_k": 4,
+      "max_distance": null,
+      "exclude_sources": ["10_AI_TOOL_CATALOG.md", "11_RAG_KNOWLEDGE_STRATEGY.md", "13_AI_GROUNDING_RULES.md", "_ANALYSIS_NOTES.md"],
+      "roles": {
+        "admin": ["admin", "admins", "administrator"],
+        "teacher": ["teacher", "teachers", "mentor", "mentors"],
+        "student": ["student", "students"],
+        "accountant": ["accountant", "accountants"],
+        "storekeeper": ["storekeeper", "storekeepers"],
+        "vendor": ["vendor", "vendors"],
+        "superadmin": ["superadmin", "platform owner"]
+      },
+      "allowed_origins": ["http://localhost:5173", "http://127.0.0.1:5173", "http://localhost:8000", "http://127.0.0.1:8000"],
+      "api_key_env": null,
+      "welcome_message": "Ask me anything about the LMS: accounts, courses, live classes, fees or the API.",
+      "example_questions": [
+        "How does a user reset a forgotten password?",
+        "What roles exist and what can each one do?",
+        "How do live classes work?"
+      ]
+    }
+  ]
+}

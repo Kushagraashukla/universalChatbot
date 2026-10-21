@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Widget demo – host website</title>
+    <!-- Deliberately aggressive host styles: the widget should NOT pick these up (Shadow DOM isolation). -->
+    <style>
+      * { font-family: Georgia, serif !important; color: #7a2e0e; }
+      button { background: hotpink; border: 3px dashed green; }
+      body { margin: 0; padding: 40px 24px; background: #fdf6ec; line-height: 1.6; }
+      main { max-width: 680px; margin: 0 auto; }
+      code { background: #f3e3c8; padding: 2px 6px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Example host website</h1>
+      <p>This page stands in for any other website that embeds the chatbot. It is served by Vite on
+        <code>localhost:5173</code>, while the widget and API come from <code>localhost:8000</code>, so it also exercises CORS.</p>
+      <p>Click the round button in the bottom-right corner to open the chat.</p>
+      <button type="button">A host-page button (styled by the host)</button>
+    </main>
+
+    <!-- The whole integration: one script tag. -->
+    <script
+      src="http://localhost:8000/widget/widget.js"
+      data-app-id="default"
+      data-title="LMS Assistant"
+      defer
+    ></script>
+  </body>
+</html>
